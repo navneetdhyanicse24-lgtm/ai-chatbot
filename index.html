@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astra - AI Chatbot</title>
+    
+    <!-- Load Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Import Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Link to your new external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900">
+
+    <!-- Main Chat Container -->
+    <div class="flex flex-col h-screen max-w-3xl mx-auto bg-gray-900 text-gray-100">
+
+        <!-- Header -->
+        <header class="bg-gray-800 shadow-md p-4 sticky top-0 z-10">
+            <h1 class="text-xl font-bold text-center text-white">
+                Astra ✨
+                <span class="block text-xs font-normal text-teal-300">AI-Powered Chatbot</span>
+            </h1>
+        </header>
+
+        <!-- Chat Window -->
+        <div id="chat-window" class="flex-grow p-4 flex flex-col space-y-4 overflow-y-auto">
+            <!-- Messages will be dynamically added here by JavaScript -->
+        </div>
+
+        <!-- Custom Modal for Errors -->
+        <div id="error-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+            <div class="bg-gray-800 rounded-lg shadow-xl p-6 max-w-sm w-full">
+                <h3 class="text-lg font-bold text-red-400">Error</h3>
+                <p id="error-message" class="text-gray-200 mt-2">An unknown error occurred.</p>
+                <button id="close-modal-btn" class="mt-4 w-full bg-teal-500 text-white py-2 px-4 rounded-lg hover:bg-teal-600 transition">
+                    OK
+                </button>
+            </div>
+        </div>
+
+        <!-- Input Area -->
+        <form id="chat-form" class="flex items-center p-4 bg-gray-800 shadow-lg">
+            <input 
+                type="text" 
+                id="message-input"
+                placeholder="Ask Astra anything..."
+                autocomplete="off"
+                class="flex-grow py-3 px-5 bg-gray-700 text-white placeholder-gray-400 rounded-l-full focus:outline-none focus:ring-2 focus:ring-teal-500 transition duration-200"
+            >
+            <button 
+                type="submit"
+                id="send-button"
+                class="py-3 px-5 bg-teal-500 text-white rounded-r-full hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500 transition duration-200"
+                aria-label="Send message"
+            >
+                <!-- Send Icon SVG -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                </svg>
+            </button>
+        </form>
+    </div>
+
+    <!-- Link to your new external JavaScript file -->
+    <!-- 'defer' ensures the script runs after the HTML is parsed -->
+    <script src="script.js" defer></script>
+</body>
+</html>
