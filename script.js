@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeModalBtn = document.getElementById('close-modal-btn');
 
     // Gemini API Configuration
-    const apiKey = "AIzaSyAlSWTuj3huMWP2vbyTe_etSuCsv8bmvzo"; // Leave as-is, Canvas will handle it.
+    const apiKey = "your api key "; // Leave as-is, Canvas will handle it.
     const model = "gemini-2.5-flash-preview-09-2025";
     // NOTE: fixed hostname typo (generativelanguage.googleapis.com). If you're still getting CORS or auth errors
     // when calling this from the browser, move the key to a server-side proxy to avoid exposing credentials.
